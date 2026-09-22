@@ -7,11 +7,11 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 5.6.0, < 6.0.0"
+      version = ">= 5.6.0"
     }
   }
 
-  required_version = ">= 1.16.3, < 2.0.0"
+  required_version = ">= 1.16.0"
 }
 # configures the provider
 

@@ -2,10 +2,10 @@ terraform {
   required_providers {
     azurerm = {
         source = "hashicorp/azurerm"
-        version = "~> 4.8.0"
+        version = "~> 5.5.0"
     }
   }
-  required_version = ">=1.9.0"
+  required_version = ">=1.16.0"
 }
 
 provider "azurerm" {
@@ -16,19 +16,19 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
-  location = "West Europe"
+  name     = "rakeshRG"
+  location = "westindia"
 }
 
 resource "azurerm_storage_account" "example" {
  
-  name                     = "techtutorial101"
+  name                     = "rakesh0sg"
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location # implicit dependency
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
   tags = {
-    environment = "staging"
+    environment = "Dev"
   }
 }
